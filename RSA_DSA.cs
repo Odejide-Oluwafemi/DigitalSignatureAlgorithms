@@ -1,6 +1,6 @@
 using System.Numerics;
 
-public class RSAKeyGen
+public class RSA_DSA
 {
   /*
   private BigInteger p;
