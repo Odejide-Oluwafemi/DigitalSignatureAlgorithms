@@ -12,3 +12,4 @@ D:\Documents\VSCode Projects\Web3Bridge\W2\Digital Signatures\obj\Debug\net9.0\r
 D:\Documents\VSCode Projects\Web3Bridge\W2\Digital Signatures\obj\Debug\net9.0\Program.pdb
 D:\Documents\VSCode Projects\Web3Bridge\W2\Digital Signatures\obj\Debug\net9.0\Program.genruntimeconfig.cache
 D:\Documents\VSCode Projects\Web3Bridge\W2\Digital Signatures\obj\Debug\net9.0\ref\Program.dll
+D:\Documents\VSCode Projects\Web3Bridge\W2\Digital Signatures\obj\Debug\net9.0\Program.sourcelink.json

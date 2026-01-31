@@ -13,21 +13,26 @@ public static class Operations
   }
 
   public static (BigInteger, BigInteger, BigInteger) ExtendedGCD(BigInteger a, BigInteger b)
-    {
-        if (b == 0)
-            return (a, 1, 0);
+  {
+    if (b == 0)
+      return (a, 1, 0);
 
-        var (gcd, x1, y1) = ExtendedGCD(b, a % b);
-        BigInteger x = y1;
-        BigInteger y = x1 - (a / b) * y1;
-        return (gcd, x, y);
-    }
+    var (gcd, x1, y1) = ExtendedGCD(b, a % b);
+    BigInteger x = y1;
+    BigInteger y = x1 - (a / b) * y1;
+    return (gcd, x, y);
+  }
 
-    public static BigInteger ModInverse(BigInteger a, BigInteger n)
-    {
-        var (gcd, x, _) = ExtendedGCD(a, n);
-        if (gcd != 1)
-            throw new Exception("Inverse does not exist");
-        return (x % n + n) % n;
-    }
+  public static BigInteger ModInverse(BigInteger a, BigInteger n)
+  {
+    var (gcd, x, _) = ExtendedGCD(a, n);
+    if (gcd != 1)
+      throw new Exception("Inverse does not exist");
+    return (x % n + n) % n;
+  }
+
+  public static BigInteger BigIntPow(BigInteger num, BigInteger exp)
+  {
+    return BigInteger.Pow(num, (int)exp);
+  }
 }
