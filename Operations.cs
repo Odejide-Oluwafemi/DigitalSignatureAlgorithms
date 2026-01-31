@@ -35,4 +35,10 @@ public static class Operations
   {
     return BigInteger.Pow(num, (int)exp);
   }
+
+  public static BigInteger GenerateRandomBigInt(bool unsigned = true, int min = 0, long max = int.MaxValue)
+  {
+    long result = new Random().NextInt64(min, max);
+    return new BigInteger(unsigned ? Math.Abs(result) : result);
+  }
 }
