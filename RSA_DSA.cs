@@ -41,9 +41,7 @@ public class RSA_DSA
 
   public static bool VerifyDocument(BigInteger doc, BigInteger docSig, BigInteger N, BigInteger e)
   {
-    return (
-      Operations.Mod(Operations.BigIntPow(docSig, e), N) == doc
-      );
+    return Operations.Mod(Operations.BigIntPow(docSig, e), N) == doc;
   }
 
   public static BigInteger GetPublicModulus(BigInteger _p, BigInteger _q)

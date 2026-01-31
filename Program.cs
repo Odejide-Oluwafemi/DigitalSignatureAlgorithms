@@ -6,6 +6,33 @@ public class Program
 {
   public static void Main(String[] args)
   {
+    RSA_Main();
+    // Elgamal_Main();
+  }
+
+  private static void PrintVerificationMessage(bool verified, string msg = "")
+  {
+    System.Console.WriteLine(
+      verified == true
+      ?
+        (msg.Trim() == "" ? "Document Verification Successful ✅" : msg)
+        :
+        (msg.Trim() == "" ? "Failed to verify Document ❌" : msg)
+    );
+  }
+
+  private static void RSA_Main()
+  {
+    /*
+      ============================
+          RSA DIGITAL SIGNATURE
+      ============================
+    */
+
+    System.Console.WriteLine("================================================================================================================");
+    System.Console.WriteLine("\t\t\t\tRSA DIGITAL SIGNATURE");
+    System.Console.WriteLine("================================================================================================================");
+
     // Samantha Info
     BigInteger largePrimeP = 1223;
     BigInteger largePrimeQ = 1987;
@@ -23,10 +50,7 @@ public class Program
     System.Console.WriteLine("====================== Successful VERIFICATION by Victor ==========================");
 
     System.Console.WriteLine("Verify Document: " + document + "\nUsing:\n\tSignature: " + docSig + "\n\tN: " + publicMod + "\n\te: " + exponent);
-    System.Console.WriteLine(
-      RSA_DSA.VerifyDocument(document, docSig, publicMod, exponent)
-        ? "Document Verification Successful ✅" : "Failed to verify Document ❌"
-    );
+    PrintVerificationMessage(RSA_DSA.VerifyDocument(document, docSig, publicMod, exponent));
 
     // Unsuccessful Verifcation by Eve
     System.Console.WriteLine("====================== Unsuccessful VERIFICATION by Eve ==========================");
@@ -38,6 +62,18 @@ public class Program
       RSA_DSA.VerifyDocument(document, docSigToVerify_x, publicMod, exponent) == true
         ? "Document Verification Successful ✅" : "Failed to verify Document ❌"
     );
+  }
+
+  private static void Elgamal_Main()
+  {
+    /*
+      =================================
+          Elgamal DIGITAL SIGNATURE
+      =================================
+    */
+
+    // Samantha Info
+
   }
 
 }
