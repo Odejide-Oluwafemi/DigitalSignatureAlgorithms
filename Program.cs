@@ -6,7 +6,7 @@ public class Program
 {
   public static void Main(String[] args)
   {
-    // RSA_Main();
+    RSA_Main();
     Elgamal_Main();
   }
 
